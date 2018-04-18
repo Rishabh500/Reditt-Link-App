@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+	<div class="article1 ml-3">
+
+
+		<div class="card p-4 bg-light mb-3" style="width: 100%;" *ngFor="let article of article">
+
+
+			<div class="row">
+				<div class="col-sm">
+					<div class="article mb-2">
+						<h3 class="text-center">{{article.votes}}
+							<h5>Points</h5>
+						</h3>
+					</div>
+				</div>
+				<div class="col-sm">
+					<h4>
+						<a class="" href="{{article.title}}" target="_blank">
+							{{ article.title }}
+						</a>
+					</h4> <small>
+        <div class="text-secondary mb-3">({{article.link}})</div>  
+            
+          </small>
+				</div>
+
+			</div>
+
+			<div class="row voteButton">
+				<div class="col-sm"> <button class="btn btn-sm btn-success ml-3 pl-" (click)="article.voteUp()" disabled={{buttonDisabledUp}}>  Upvote</button></div>
+				<div class="col-sm "> <button class="btn btn-sm btn-danger ml-3" (click)="article.voteDown()" disabled={{buttonDisabledDown}}>Downvote</button></div>
+
+			</div>
+
+		</div>
+		<br>
+
+	</div>
+
+
+
+</body>
+
+</html>

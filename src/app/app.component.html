@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Reditt Link</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+     <h2 class="text-muted mt-4">Link App</h2>  
+<br>      <div class="holder bg-light p-3">
+        <h3>Add a link</h3>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title: </label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Enter Title" #title>
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Link:</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Link" name="link" #link>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" (click)="addArticle(title,link)">Submit</button>
+</form>
+</div>
+<br>
+<br>
+<div class="row">
+  <my-article [article]="articles" ></my-article>
+</div>
+    </div>
+   </body>
+</html>

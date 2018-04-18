@@ -1,0 +1,10 @@
+.article{
+  padding: 7px;
+  background-color: dimgrey;
+  border-radius: 5%;
+  margin-left: 0px;  
+}
+
+.voteButton{
+  margin-left: -30px;
+}
